@@ -8,7 +8,7 @@ class Dog
   end
   
   def self.create_table
-    sql = <<=SQL 
+    sql = <<-SQL 
       CREATE TABLE IF NOT EXISTS dogs (
         id INTEGER PRIMARY KEY,
         name TEXT,
@@ -20,9 +20,9 @@ class Dog
   end
   
   def self.drop_table
-    sql = <<=SQL 
+    sql = <<-SQL 
       DROP TABLE dogs
-      SQL
+      SQL 
       DB[:conn].execute(sql)
   end
   
